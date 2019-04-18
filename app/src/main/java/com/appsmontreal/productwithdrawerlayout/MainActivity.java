@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 import Model.Product;
 import Model.ProductFileManagement;
+import Model.ProductFragment;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     public static final String KEY = "ok";
@@ -42,6 +43,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(KEY,productArrayList.get(position));
+
+
+        //REPLACE THE LINEAR LAYOUT WITH FRAGMENT
+        ProductFragment productFragment = new ProductFragment();
+        productFragment.setArguments(bundle);
+
+
+        //REFERENCE THE FRAGMENT MANAGER
+        android.app.FragmentManager fragmentManager = getFragmentManager();
+        //BEGIN THE TRANSACTION
+        android.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        //REPLACE LINEAR LAYOUT MAIN_UI WITH THE FRAGMENT
+        fragmentTransaction.replace(R.id.main_ui,productFragment);
+
+        //COMMIT THE TRANSACTION
+        fragmentTransaction.commit();
+
+        setTitle(productArrayList.get(position).getPictureId());
+
+        drawerLayout.closeDrawer(productListView);
 
     }
 }
