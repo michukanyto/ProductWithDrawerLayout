@@ -32,7 +32,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal|center_vertical">
 
         <TableRow
             android:layout_width="match_parent"
@@ -41,54 +42,65 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Product name  :  "
+                android:layout_weight="1"
+                android:text="Product name :  "
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewProductName"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="........" />
+                android:layout_weight="1"
+                android:text="........"
+                android:textAlignment="textStart" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="clip_vertical|center_vertical">
+            android:gravity="center_horizontal|center_vertical">
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Cost                   :  "
+                android:layout_weight="1"
+                android:text="Cost :  "
+                android:textAlignment="viewStart"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewProductCost"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="........" />
+                android:layout_weight="1"
+                android:text="........"
+                android:textAlignment="textStart" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="clip_vertical|center_vertical">
+            android:gravity="center_horizontal|center_vertical">
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Fees                    :  "
+                android:layout_weight="1"
+                android:text="Fees :  "
+                android:textAlignment="viewStart"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewProductFees"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="........" />
+                android:layout_weight="1"
+                android:text="........"
+                android:textAlignment="textStart" />
         </TableRow>
 
         <TableRow
@@ -98,16 +110,20 @@
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Total                   :  "
+                android:layout_weight="1"
+                android:text="Total :  "
+                android:textAlignment="viewStart"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewProductTotal"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="........" />
+                android:layout_weight="1"
+                android:text="........"
+                android:textAlignment="textStart" />
         </TableRow>
 
         <TableRow

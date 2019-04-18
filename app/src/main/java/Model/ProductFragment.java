@@ -36,8 +36,9 @@ public class ProductFragment extends android.app.Fragment {
         textViewProductFees.setText(String.valueOf(product.getFees()));
         TextView textViewProductTotal = getActivity().findViewById(R.id.textViewProductTotal);
         textViewProductTotal.setText(String.valueOf(product.getFees() + product.getCost()));
-//        ImageView imageView = getActivity().findViewById(R.id.imageViewProductView);
-//        imageView.setImageResource();
+        int resourceId = getResources().getIdentifier("drawable/" + product.getPictureId(),null,getActivity().getPackageName());
+        ImageView imageView = getActivity().findViewById(R.id.imageViewProductView);
+        imageView.setImageResource(resourceId);
 
 
 

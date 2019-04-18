@@ -3,23 +3,23 @@ package Model;
 import java.io.Serializable;
 
 public class Product implements Serializable {
-    private int pictureId;
+    private String pictureId;
     private String productName;
     private float cost;
     private float fees;
 
-    public Product(int pictureId, String productName, float cost, float fees) {
+    public Product(String pictureId, String productName, float cost, float fees) {
         this.pictureId = pictureId;
         this.productName = productName;
         this.cost = cost;
         this.fees = fees;
     }
 
-    public int getPictureId() {
+    public String getPictureId() {
         return pictureId;
     }
 
-    public void setPictureId(int pictureId) {
+    public void setPictureId(String pictureId) {
         this.pictureId = pictureId;
     }
 

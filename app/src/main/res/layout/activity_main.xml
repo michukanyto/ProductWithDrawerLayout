@@ -14,12 +14,14 @@
         android:orientation="horizontal"
         android:background="#ffffff">
 
-        <ListView
-            android:id="@+id/listViewProducts"
-            android:layout_width="180dp"
-            android:layout_height="match_parent"
-            android:background="#FFB300"
-            android:layout_gravity="start"/>
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewProducts"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:background="#FFB300"
+        android:layout_gravity="start"/>
+
 </android.support.v4.widget.DrawerLayout>
 

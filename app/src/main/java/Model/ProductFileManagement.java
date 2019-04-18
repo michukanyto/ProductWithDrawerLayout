@@ -25,7 +25,7 @@ public class ProductFileManagement {
 
             while (oneLine != null){
                 StringTokenizer st = new StringTokenizer(oneLine,",");
-                listOfProduct.add(new Product(Integer.parseInt(st.nextToken()),st.nextToken(),Float.parseFloat(st.nextToken()),Float.parseFloat(st.nextToken())));
+                listOfProduct.add(new Product(st.nextToken(),st.nextToken(),Float.parseFloat(st.nextToken()),Float.parseFloat(st.nextToken())));
                 oneLine = br.readLine();
             }
             br.close();
