@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         //BEGIN THE TRANSACTION
         android.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         //REPLACE LINEAR LAYOUT MAIN_UI WITH THE FRAGMENT
+        fragmentTransaction.detach(productFragment).attach(productFragment);
         fragmentTransaction.replace(R.id.main_ui,productFragment);
 
         //COMMIT THE TRANSACTION
